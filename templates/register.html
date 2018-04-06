@@ -1,0 +1,110 @@
+{% from "_formhelpers.html" import render_field %}
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <title>_forky_</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+  </head>
+
+<body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">This site as created with the objective of creating a piece of art and most beautiful Online examination site ever Developed. Enjoy all the features of this site and contact us for submission of any bug encountered or Suggestions.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+
+            <strong>_forky_</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+	{% include '_messages.html' %}
+	<center>
+  <div class="form-group">
+
+      <div class="tab-content">
+        <div id="signup">
+          <center><h1 class="h3 mb-3 font-weight-normal">Please sign in</h1></center>
+
+          <form action="" method="POST">
+
+            <div class="field-wrap">
+              <label>
+                {{ render_field(form.username,class_="form-control") }}
+              </label>
+            </div>
+
+
+
+          <div class="field-wrap">
+            <label>
+               {{ render_field(form.email,class_="form-control",type="email") }}
+            </label>
+          </div>
+
+
+          <div class="field-wrap">
+            <label>
+              {{ render_field(form.password,class_="form-control") }}
+            </label>
+          </div>
+
+
+          <div class="field-wrap">
+            <label>
+              {{ render_field(form.confirm,class_="form-control") }}
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary"/>Get Started</button>
+
+          </form>
+
+        </div>
+
+      </div><!-- tab-content -->
+
+	</div> <!-- /form -->
+	</center>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="http://getbootstrap.com/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+
+</body>
+
+</html>

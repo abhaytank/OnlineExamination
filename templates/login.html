@@ -1,0 +1,57 @@
+{% from "_formhelpers.html" import render_field %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <title>Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+  </head>
+<body>
+  {% block body %}
+	<center>
+  <div class="form-group">
+
+      <div class="tab-content">
+        <div id="login">
+          <center>
+              {% include '_messages.html' %}
+            <a href='/' style="text-decoration: none;"><h1 class="jumbotron-heading">_f❤️rky_</h1></a>
+            <p class="lead text-muted">A sweet and powerful tool for making Online Examination more Interactive than ever</p>
+          <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+          </center>
+          <form action="" method="POST">
+
+          <div class="field-wrap">
+            <label>
+               {{ render_field(form.email,class_="form-control",type="email") }}
+            </label>
+          </div>
+
+
+          <div class="field-wrap">
+            <label>
+              {{ render_field(form.password,class_="form-control") }}
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary"/>Login</button>
+          </form>
+
+        </div>
+
+      </div><!-- tab-content -->
+
+	</div> <!-- /form -->
+	</center>
+  {% endblock %}
+  </body>
+</html>

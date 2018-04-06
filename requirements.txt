@@ -1,0 +1,7 @@
+flask
+flask-mysqldb
+flask-wtf
+flask-mail
+passlib
+
+/* Edit config.cfg with your email info and database and install above packages using pip*/
